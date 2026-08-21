@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="signup-section w-100 vh-100 d-flex justify-content-center align-items-center">
+        <form [formGroup]="signupForm" class="signup-form p-5 bg-white" (ngSubmit)="submitForm()">
+            <h2 class="text-center mb-4">Signup Form</h2>
+            <div class="form-group">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" formControlName="username" placeholder="name" />
+
+                    @if(signupForm.controls.username.touched
+                    && signupForm.controls.username.hasError('required')){
+                    <div class="text-danger">
+                        Username required
+                    </div>
+                    }
+                    @if(signupForm.controls.username.touched
+                    && signupForm.controls.username.hasError('minlength')){
+                    <div class="text-danger">
+                        Username min length: 3
+                    </div>
+                    }
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="email" />
+                </div>
+                @if(signupForm.controls.email.touched
+                && signupForm.controls.email.hasError('required')){
+                <div class="text-danger">
+                    Email required
+                </div>
+                }
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="number" class="form-control" formControlName="age" placeholder="age" />
+                </div>
+                @if(signupForm.controls.age.touched
+                && signupForm.controls.age.hasError('required')){
+                <div class="text-danger">
+                    Age required
+                </div>
+                }
+                <div class="mb-3">
+                    <label for="age" class="form-label">Gender:</label>
+                    <input type="text" class="form-control" formControlName="gender" placeholder="gender" />
+                </div>
+                @if(signupForm.controls.gender.touched
+                && signupForm.controls.gender.hasError('required')){
+                <div class="text-danger">
+                    Gender required
+                </div>
+                }
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="password" />
+                </div>
+                @if(signupForm.controls.password.touched
+                && signupForm.controls.password.hasError('required')){
+                <div class="text-danger">
+                    Password required
+                </div>
+                }
+                @if(signupForm.controls.password.touched
+                && signupForm.controls.password.hasError('minlength')){
+                <div class="text-danger">
+                    Passwod min length: 8
+                </div>
+                }
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary ">Submit1</button>
+                </div>
+            </div>
+            <div>
+                <p>Already signedUp <a href="/login">Login</a> here</p>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="signin-section w-100 vh-100 d-flex justify-content-center align-items-center">
+        <form [formGroup]="loginForm" class="signin-form p-5 bg-white" (ngSubmit)="login()">
+            <h2 class="text-center mb-4">LogIn</h2>
+            <div class="form-group">
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" formControlName="username" placeholder="email" />
+                </div>
+                @if(loginForm.controls.username.invalid){
+                <p class="text-danger">Enter Username</p>
+                }
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="password" />
+                </div>
+                @if(loginForm.controls.password.invalid){
+                <p class="text-danger">Enter Password</p>
+                }
+                <div class="mb-3 text-center">
+                    <button type="submit" class="btn btn-primary ">Login</button>
+                </div>
+            </div>
+            <div class="text-center">
+                <p>New User <a href="/signup">Signup</a> here</p>
+            </div>
+        </form>
+    </div>
+</div>

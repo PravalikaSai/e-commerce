@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Wireless Headphones",
+    "slug": "premium-wireless-headphones",
+    "category": "electronics",
+    "price": 14999,
+    "currency": "INR",
+    "stock": 42,
+    "rating": 4.7,
+    "brand": "NovaSound",
+    "description": "High-fidelity wireless headphones with active noise cancellation."
+  },
+  {
+    "id": 2,
+    "name": "Ultra Smart Watch",
+    "slug": "ultra-smart-watch",
+    "category": "wearables",
+    "price": 22999,
+    "currency": "INR",
+    "stock": 28,
+    "rating": 4.6,
+    "brand": "Chronex",
+    "description": "Premium smartwatch with health, fitness and productivity features."
+  },
+  {
+    "id": 3,
+    "name": "Mechanical Pro Keyboard",
+    "slug": "mechanical-pro-keyboard",
+    "category": "electronics",
+    "price": 8999,
+    "currency": "INR",
+    "stock": 65,
+    "rating": 4.8,
+    "brand": "KeyForge",
+    "description": "Premium mechanical keyboard designed for developers and creators."
+  },
+  {
+    "id": 4,
+    "name": "4K Creator Monitor",
+    "slug": "4k-creator-monitor",
+    "category": "electronics",
+    "price": 38999,
+    "currency": "INR",
+    "stock": 16,
+    "rating": 4.9,
+    "brand": "VisionPro",
+    "description": "Color-accurate 4K display for professional creative workflows."
+  },
+  {
+    "id": 5,
+    "name": "Executive Leather Backpack",
+    "slug": "executive-leather-backpack",
+    "category": "fashion",
+    "price": 6999,
+    "currency": "INR",
+    "stock": 31,
+    "rating": 4.5,
+    "brand": "UrbanCraft",
+    "description": "Minimal premium backpack for work and travel."
+  },
+  {
+    "id": 6,
+    "name": "Performance Running Shoes",
+    "slug": "performance-running-shoes",
+    "category": "footwear",
+    "price": 7999,
+    "currency": "INR",
+    "stock": 54,
+    "rating": 4.6,
+    "brand": "Velocity",
+    "description": "Lightweight performance shoes engineered for daily training."
+  },
+  {
+    "id": 7,
+    "name": "Flagship Smartphone",
+    "slug": "flagship-smartphone",
+    "category": "electronics",
+    "price": 74999,
+    "currency": "INR",
+    "stock": 19,
+    "rating": 4.8,
+    "brand": "Astra",
+    "description": "Flagship smartphone with a high-performance processor and camera."
+  },
+  {
+    "id": 8,
+    "name": "Minimal Desk Lamp",
+    "slug": "minimal-desk-lamp",
+    "category": "home",
+    "price": 2499,
+    "currency": "INR",
+    "stock": 87,
+    "rating": 4.4,
+    "brand": "Luma",
+    "description": "Adjustable modern desk lamp for focused workspaces."
+  }
+]
