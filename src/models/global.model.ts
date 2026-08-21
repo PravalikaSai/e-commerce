@@ -40,3 +40,25 @@ export class LoginResponse {
         "user": UserDataModal
     };
 }
+
+export class ProductModel {
+    "page": number;
+    "limit": number
+}
+export class ProductResponse {
+    "success": boolean;
+    "data":
+        {
+            "id": number;
+            "name": string;
+            "slug": string;
+            "category": string;
+            "price": number;
+            "currency": string;
+            "stock": number;
+            "rating": number;
+            "brand": string;
+            "description": string;
+            "imageUrl": string;
+        }
+}
