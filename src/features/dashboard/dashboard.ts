@@ -1,11 +1,12 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectorRef} from '@angular/core';
 import { Authentication } from '../../services/authentication';
 import { Router, RouterModule } from '@angular/router';
 import { ProductCard } from '../../components/product-card/product-card';
 import { ProductService } from '../../services/product-service';
 import { ProductResponse } from '../../models/global.model';
-import { ProductModel } from '../../models/global.model';
+import { ProductModel, PageConfigModel } from '../../models/global.model';
 import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -14,113 +15,6 @@ import { Observable } from 'rxjs';
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
-
-  // products = [
-  //   {
-  //     "id": 1,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 2,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 3,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 4,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 5,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 6,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 7,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   },
-  //   {
-  //     "id": 8,
-  //     "name": "Premium Wireless Headphones",
-  //     "slug": "premium-wireless-headphones",
-  //     "category": "electronics",
-  //     "price": 14999,
-  //     "currency": "INR",
-  //     "stoccd ..k": 42,
-  //     "rating": 4.7,
-  //     "brand": "NovaSound",
-  //     "description": "High-fidelity wireless headphones with active noise cancellation.",
-  //     "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-  //   }
-  // ]
 
   service = inject(Authentication)
 
@@ -132,26 +26,42 @@ export class Dashboard {
 
   products: any = [];
 
+  cdr = inject(ChangeDetectorRef);
 
+  pageConfig: PageConfigModel = new PageConfigModel();
 
   options: ProductModel = {
-    page: 1,
-    limit: 10
-  }
+      page: 1,
+      limit: 2
+    }
+  // options : ProductModel = new ProductModel();
+
+
+  
+  
 
   ngOnInit() {
+
+    // this.options.page = 1;
+    // this.options.limit = 2;
+
+    console.log("options",this.options)
 
     this.productservice.products$.subscribe(res => {
       if (res?.data) {
         this.products = res?.data;
         console.log("Products: ", this.products)
+        if(res?.pagination){
+          this.pageConfig = res.pagination;
+          console.log("pageConfig: ", this.pageConfig);
+        }
+        this.cdr.detectChanges();
       } else {
         this.products = [];
       }
-    })
+    });
 
-
-    this.getProducts();
+    this.getProducts(this.options);
   }
 
   logOut() {
@@ -159,12 +69,39 @@ export class Dashboard {
     this.router.navigate(['/login'])
   }
 
-  getProducts() {
-    const options: ProductModel = {
-      page: 1,
-      limit: 10
-    }
+  getProducts(options:ProductModel) {
+    
     this.productservice.getProducts(options);
+
+  }
+
+  previousPage(){
+    console.log("inside previous")
+     if (this.pageConfig.hasPreviousPage) {
+      // this.options ={
+      //   page : this.pageConfig.page - 1,
+      //   limit: this.pageConfig.limit,
+      // }
+
+      this.options.page --;
+
+      this.getProducts(this.options);
+    }
+
+  }
+
+  nextPage(){
+    console.log("inside next")
+    if (this.pageConfig.hasNextPage) {
+      // this.options ={
+      //   page : this.pageConfig.page + 1,
+      //   limit: this.pageConfig.limit,
+      // }
+
+      this.options.page ++;
+
+      this.getProducts(this.options);
+    }
 
   }
 
