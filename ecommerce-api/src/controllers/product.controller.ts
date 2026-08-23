@@ -21,3 +21,25 @@ export async function getProducts(req: Request, res: Response): Promise<void> {
     pagination: result.pagination
   });
 }
+
+export async function getProductById(
+  req: Request,
+  res: Response
+): Promise<void> {
+  const id = Number(req.params.id);
+
+  if (!Number.isInteger(id) || id < 1) {
+    throw new AppError("Product ID must be a positive integer", 400);
+  }
+
+  const product = await productService.getProductById(id);
+
+  if (!product) {
+    throw new AppError("Product not found", 404);
+  }
+
+  res.status(200).json({
+    success: true,
+    data: product
+  });
+}

@@ -18,6 +18,12 @@ class ProductRepository extends JsonRepository<Product> {
       }
     };
   }
+
+  async findById(id: number): Promise<Product | undefined> {
+    const products = await this.readAll();
+
+    return products.find(product => product.id === id);
+  }
 }
 
 export default new ProductRepository();
