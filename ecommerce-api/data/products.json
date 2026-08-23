@@ -9,7 +9,8 @@
     "stock": 42,
     "rating": 4.7,
     "brand": "NovaSound",
-    "description": "High-fidelity wireless headphones with active noise cancellation."
+    "description": "High-fidelity wireless headphones with active noise cancellation.",
+    "imageUrl": "https://images.pexels.com/photos/8038326/pexels-photo-8038326.jpeg"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "stock": 28,
     "rating": 4.6,
     "brand": "Chronex",
-    "description": "Premium smartwatch with health, fitness and productivity features."
+    "description": "Premium smartwatch with health, fitness and productivity features.",
+    "imageUrl": "https://images.pexels.com/photos/18662969/pexels-photo-18662969.jpeg"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "stock": 65,
     "rating": 4.8,
     "brand": "KeyForge",
-    "description": "Premium mechanical keyboard designed for developers and creators."
+    "description": "Premium mechanical keyboard designed for developers and creators.",
+    "imageUrl": "https://images.pexels.com/photos/5380584/pexels-photo-5380584.jpeg"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "stock": 16,
     "rating": 4.9,
     "brand": "VisionPro",
-    "description": "Color-accurate 4K display for professional creative workflows."
+    "description": "Color-accurate 4K display for professional creative workflows.",
+    "imageUrl": "https://images.pexels.com/photos/14127564/pexels-photo-14127564.jpeg"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "stock": 31,
     "rating": 4.5,
     "brand": "UrbanCraft",
-    "description": "Minimal premium backpack for work and travel."
+    "description": "Minimal premium backpack for work and travel.",
+    "imageUrl": "https://images.pexels.com/photos/5827880/pexels-photo-5827880.jpeg"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "stock": 54,
     "rating": 4.6,
     "brand": "Velocity",
-    "description": "Lightweight performance shoes engineered for daily training."
+    "description": "Lightweight performance shoes engineered for daily training.",
+    "imageUrl": "https://images.pexels.com/photos/163535/run-fitness-workout-train-163535.jpeg"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "stock": 19,
     "rating": 4.8,
     "brand": "Astra",
-    "description": "Flagship smartphone with a high-performance processor and camera."
+    "description": "Flagship smartphone with a high-performance processor and camera.",
+    "imageUrl": "https://images.pexels.com/photos/5243203/pexels-photo-5243203.jpeg"
   },
   {
     "id": 8,
@@ -93,6 +100,267 @@
     "stock": 87,
     "rating": 4.4,
     "brand": "Luma",
-    "description": "Adjustable modern desk lamp for focused workspaces."
+    "description": "Adjustable modern desk lamp for focused workspaces.",
+    "imageUrl": "https://images.pexels.com/photos/8263851/pexels-photo-8263851.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Wireless Ergonomic Mouse",
+    "slug": "wireless-ergonomic-mouse",
+    "category": "electronics",
+    "price": 3499,
+    "currency": "INR",
+    "stock": 72,
+    "rating": 4.5,
+    "brand": "KeyForge",
+    "description": "Ergonomic wireless mouse designed for comfortable long-hour productivity.",
+    "imageUrl": "https://images.pexels.com/photos/7091930/pexels-photo-7091930.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Portable Bluetooth Speaker",
+    "slug": "portable-bluetooth-speaker",
+    "category": "electronics",
+    "price": 5999,
+    "currency": "INR",
+    "stock": 48,
+    "rating": 4.6,
+    "brand": "NovaSound",
+    "description": "Compact Bluetooth speaker delivering powerful audio with deep bass.",
+    "imageUrl": "https://images.pexels.com/photos/4917455/pexels-photo-4917455.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Fitness Smart Band",
+    "slug": "fitness-smart-band",
+    "category": "wearables",
+    "price": 3999,
+    "currency": "INR",
+    "stock": 93,
+    "rating": 4.3,
+    "brand": "Chronex",
+    "description": "Lightweight fitness band with activity tracking, sleep monitoring and notifications.",
+    "imageUrl": "https://images.pexels.com/photos/6956992/pexels-photo-6956992.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Premium Cotton Hoodie",
+    "slug": "premium-cotton-hoodie",
+    "category": "fashion",
+    "price": 2999,
+    "currency": "INR",
+    "stock": 61,
+    "rating": 4.5,
+    "brand": "UrbanCraft",
+    "description": "Soft premium cotton hoodie designed for everyday comfort and casual style.",
+    "imageUrl": "https://images.pexels.com/photos/35451685/pexels-photo-35451685.jpeg"
+  },
+  {
+    "id": 13,
+    "name": "Classic Leather Wallet",
+    "slug": "classic-leather-wallet",
+    "category": "fashion",
+    "price": 1999,
+    "currency": "INR",
+    "stock": 84,
+    "rating": 4.4,
+    "brand": "UrbanCraft",
+    "description": "Slim genuine leather wallet with multiple card and cash compartments.",
+    "imageUrl": "https://images.pexels.com/photos/12442671/pexels-photo-12442671.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Noise Cancelling Earbuds",
+    "slug": "noise-cancelling-earbuds",
+    "category": "electronics",
+    "price": 8999,
+    "currency": "INR",
+    "stock": 37,
+    "rating": 4.7,
+    "brand": "NovaSound",
+    "description": "True wireless earbuds with active noise cancellation and premium audio quality.",
+    "imageUrl": "https://images.pexels.com/photos/33307582/pexels-photo-33307582.jpeg"
+  },
+  {
+    "id": 15,
+    "name": "Smart Home Security Camera",
+    "slug": "smart-home-security-camera",
+    "category": "home",
+    "price": 6499,
+    "currency": "INR",
+    "stock": 29,
+    "rating": 4.6,
+    "brand": "VisionPro",
+    "description": "Full HD smart security camera with night vision and mobile monitoring.",
+    "imageUrl": "https://images.pexels.com/photos/22307556/pexels-photo-22307556.jpeg"
+  },
+  {
+    "id": 16,
+    "name": "Adjustable Office Chair",
+    "slug": "adjustable-office-chair",
+    "category": "furniture",
+    "price": 12999,
+    "currency": "INR",
+    "stock": 24,
+    "rating": 4.5,
+    "brand": "UrbanCraft",
+    "description": "Ergonomic office chair with adjustable height, lumbar support and comfortable cushioning.",
+    "imageUrl": "https://images.pexels.com/photos/37468394/pexels-photo-37468394.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Stainless Steel Water Bottle",
+    "slug": "stainless-steel-water-bottle",
+    "category": "lifestyle",
+    "price": 1499,
+    "currency": "INR",
+    "stock": 112,
+    "rating": 4.6,
+    "brand": "HydraMax",
+    "description": "Insulated stainless steel bottle that keeps beverages hot or cold for hours.",
+    "imageUrl": "https://images.pexels.com/photos/7815024/pexels-photo-7815024.jpeg"
+  },
+  {
+    "id": 18,
+    "name": "Digital Kitchen Scale",
+    "slug": "digital-kitchen-scale",
+    "category": "home",
+    "price": 1299,
+    "currency": "INR",
+    "stock": 76,
+    "rating": 4.3,
+    "brand": "Luma",
+    "description": "Accurate digital kitchen scale with a clear display and precision measurement.",
+    "imageUrl": "https://images.pexels.com/photos/38820935/pexels-photo-38820935.jpeg"
+  },
+  {
+    "id": 19,
+    "name": "Gaming Laptop Pro",
+    "slug": "gaming-laptop-pro",
+    "category": "electronics",
+    "price": 89999,
+    "currency": "INR",
+    "stock": 14,
+    "rating": 4.8,
+    "brand": "Astra",
+    "description": "High-performance gaming laptop with powerful graphics and fast processing.",
+    "imageUrl": "https://images.pexels.com/photos/37694203/pexels-photo-37694203.jpeg"
+  },
+  {
+    "id": 20,
+    "name": "Smart LED TV 55 Inch",
+    "slug": "smart-led-tv-55-inch",
+    "category": "electronics",
+    "price": 54999,
+    "currency": "INR",
+    "stock": 21,
+    "rating": 4.7,
+    "brand": "VisionPro",
+    "description": "55-inch 4K smart LED TV with vivid picture quality and connected entertainment.",
+    "imageUrl": "https://images.pexels.com/photos/1682519/pexels-photo-1682519.jpeg"
+  },
+  {
+    "id": 21,
+    "name": "Travel Duffel Bag",
+    "slug": "travel-duffel-bag",
+    "category": "fashion",
+    "price": 3499,
+    "currency": "INR",
+    "stock": 45,
+    "rating": 4.4,
+    "brand": "UrbanCraft",
+    "description": "Spacious and durable duffel bag designed for weekend trips and travel.",
+    "imageUrl": "https://images.pexels.com/photos/1986996/pexels-photo-1986996.jpeg"
+  },
+  {
+    "id": 22,
+    "name": "Casual Walking Sneakers",
+    "slug": "casual-walking-sneakers",
+    "category": "footwear",
+    "price": 4499,
+    "currency": "INR",
+    "stock": 68,
+    "rating": 4.5,
+    "brand": "Velocity",
+    "description": "Comfortable lightweight sneakers designed for walking and everyday use.",
+    "imageUrl": ""
+  },
+  {
+    "id": 23,
+    "name": "Premium Coffee Maker",
+    "slug": "premium-coffee-maker",
+    "category": "home",
+    "price": 7499,
+    "currency": "INR",
+    "stock": 32,
+    "rating": 4.6,
+    "brand": "BrewMaster",
+    "description": "Modern coffee maker designed to prepare rich and flavorful coffee at home.",
+    "imageUrl": "https://images.pexels.com/photos/21342590/pexels-photo-21342590.jpeg"
+  },
+  {
+    "id": 24,
+    "name": "Wireless Charging Station",
+    "slug": "wireless-charging-station",
+    "category": "electronics",
+    "price": 2999,
+    "currency": "INR",
+    "stock": 57,
+    "rating": 4.4,
+    "brand": "Astra",
+    "description": "Multi-device wireless charging station for smartphones, watches and earbuds.",
+    "imageUrl": ""
+  },
+  {
+    "id": 25,
+    "name": "Premium Yoga Mat",
+    "slug": "premium-yoga-mat",
+    "category": "fitness",
+    "price": 2499,
+    "currency": "INR",
+    "stock": 81,
+    "rating": 4.7,
+    "brand": "FlexFit",
+    "description": "Non-slip cushioned yoga mat designed for comfortable workouts and stretching.",
+    "imageUrl": "https://images.pexels.com/photos/7510258/pexels-photo-7510258.jpeg"
+  },
+  {
+    "id": 26,
+    "name": "Electric Air Fryer",
+    "slug": "electric-air-fryer",
+    "category": "home",
+    "price": 8999,
+    "currency": "INR",
+    "stock": 26,
+    "rating": 4.6,
+    "brand": "BrewMaster",
+    "description": "Digital air fryer with adjustable temperature and convenient preset cooking modes.",
+    "imageUrl": "https://images.pexels.com/photos/35285814/pexels-photo-35285814.jpeg"
+  },
+  {
+    "id": 27,
+    "name": "Portable SSD 1TB",
+    "slug": "portable-ssd-1tb",
+    "category": "electronics",
+    "price": 8999,
+    "currency": "INR",
+    "stock": 39,
+    "rating": 4.8,
+    "brand": "DataCore",
+    "description": "High-speed portable SSD with 1TB storage for fast file transfers and backups.",
+    "imageUrl": "https://images.pexels.com/photos/2942361/pexels-photo-2942361.jpeg"
+  },
+  {
+    "id": 28,
+    "name": "Premium Sunglasses",
+    "slug": "premium-sunglasses",
+    "category": "fashion",
+    "price": 3999,
+    "currency": "INR",
+    "stock": 52,
+    "rating": 4.5,
+    "brand": "UrbanCraft",
+    "description": "Stylish premium sunglasses with UV protection and a lightweight frame.",
+    "imageUrl": "Premium Sunglasses"
   }
 ]
