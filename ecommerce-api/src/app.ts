@@ -7,6 +7,8 @@ import authRoutes from "./routes/auth.routes.js";
 import productRoutes from "./routes/product.routes.js";
 import { corsOptions } from "./config/cors.config.js";
 import { notFound, errorHandler } from "./middleware/error.middleware.js";
+import cartRoutes from "./routes/cart.routes.js";
+import favouriteRoutes from "./routes/favourite.routes.js";
 
 const app = express();
 
@@ -19,6 +21,23 @@ app.use(morgan("dev"));
 
 app.use("/api/v1/auth", rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }), authRoutes);
 app.use("/api/v1/products", rateLimit({ windowMs: 15 * 60 * 1000, max: 300 }), productRoutes);
+app.use(
+  "/api/v1/cart",
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 300
+  }),
+  cartRoutes
+);
+
+app.use(
+  "/api/v1/favourites",
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 300
+  }),
+  favouriteRoutes
+);
 
 app.get("/health", (_req, res) => {
   res.status(200).json({ success: true, message: "API is healthy" });
