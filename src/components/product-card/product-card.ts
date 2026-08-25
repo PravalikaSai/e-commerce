@@ -1,4 +1,5 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input, input , inject } from '@angular/core';
+import { ProductService } from '../../services/product-service';
 
 @Component({
   selector: 'app-product-card',
@@ -9,6 +10,10 @@ import { Component, Input, input } from '@angular/core';
 export class ProductCard {
 
   @Input() product: any = {};
+  currentQuantity:number = 0;
+
+  productservice = inject(ProductService)
+
 
   // arr = new Array();
 
@@ -18,4 +23,17 @@ export class ProductCard {
   //   console.log(this.arr)
 
   // }
+
+  addToCart(event:Event, id:number){
+    event.stopPropagation();
+    console.log("inside add to cart")
+    this.currentQuantity++;
+    const payload = {
+      productId : id,
+      quantity: this.currentQuantity
+    }
+    this.productservice.addProductToCart(payload);
+
+    
+  }
 }

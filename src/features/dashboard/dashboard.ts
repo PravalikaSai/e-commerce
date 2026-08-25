@@ -32,7 +32,8 @@ export class Dashboard {
 
   options: ProductModel = {
       page: 1,
-      limit: 2
+      limit: 10
+
     }
   // options : ProductModel = new ProductModel();
 
@@ -103,6 +104,10 @@ export class Dashboard {
       this.getProducts(this.options);
     }
 
+  }
+
+  productDetails(id:number){
+    this.router.navigate(['/products',id]);
   }
 
 }

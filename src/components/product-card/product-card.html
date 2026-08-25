@@ -8,12 +8,12 @@
                     <span class="badge bg-secondary position-absolute top-0 start-0 m-3">{{product.rating}}⭐</span>
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
+                <h5 class="card-title text-truncate">{{product.name}}</h5>
                 <p class="card-text">{{product.currency}}-{{product.price}}/-</p>
                 <!-- @for(i of arr; track $index){
                     <span>⭐</span>
                 } -->
-                <a href="#" class="btn btn-primary">Add to Cart</a>
+                <button class="btn btn-primary" (click)="addToCart($event, product.id)">Add to Cart</button>
             </div>
         </div>
     </div>
